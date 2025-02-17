@@ -12,12 +12,14 @@ $(function(){
         const timestamp = new Date().toISOString();
         
         //only generate new user ID if there is a new session
-        const userID = generateString(5); 
+        const userID = generateUserID(5); 
         console.log(userID); //print ID
         
         const logData = {
+            userID: userID,
             action: action,
             timestamp: timestamp,
+            additionalData: additionalData,
         }
         
         // forward to NGROk
@@ -43,7 +45,6 @@ $(function(){
 
     };
 
-
     //Helper function: Generate random string for user ID
     function generateUserID(length){
         let result = ' ';
@@ -54,6 +55,21 @@ $(function(){
     
         return result;
     };
-    
-}
-);
+
+    //Arousal slider
+    $("#AS-arousal").on("input change", function () {
+        let value = $(this).val();
+        console.log("Arousal value:", value);
+        logUserAction("Arousal Slider Moved", { arousalValue: value });
+    });
+
+    $("#AS-pleasure").on("input change", function () {
+        let value = $(this).val();
+        console.log("Pleasure value:", value);
+        logUserAction("Pleasure Slider Moved", { pleasureValue: value });
+    });
+
+    //refresh sliders for jquery mobile
+    $("#AS-arousal, #AS-pleasure").slider("refresh");
+
+});
