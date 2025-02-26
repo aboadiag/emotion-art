@@ -26,7 +26,6 @@ def log_Slider_data():
         data = request.json
         print(f"Raw data: {data}")
 
-
         action = data.get("action")
         timestamp_str = data.get("timestamp")
 
