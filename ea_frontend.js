@@ -1,5 +1,5 @@
 $(function(){
-    const BASE_URL =";"
+    const BASE_URL ="";
     var container=$("container")
     
     // declare all characters

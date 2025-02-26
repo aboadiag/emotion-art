@@ -47,13 +47,13 @@ print(dict_len)
 # print(f"Number of cols {axarr}")
 
 
-# for emotion in dict_len:
-#     try:
-#         img = get_random_painting_by_emotion(emotion)
-#         print(emotion)
-#         # axarr[f, emotion].imshow(emotion)
+for emotion in img_dict:
+    try:
+        img = get_random_painting_by_emotion(emotion)
+        print(emotion)
+        # axarr[f, emotion].imshow(emotion)
 
-#         # img.show()
-#         # display(img)
-#     except Exception as e:
-#         print(e)
+        img.show()
+        # display(img)
+    except Exception as e:
+        print(e)
