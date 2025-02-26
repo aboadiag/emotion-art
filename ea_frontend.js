@@ -56,6 +56,9 @@ $(function(){
         return result;
     };
 
+    // Initialize sliders for jQuery Mobile
+    $("#AS-arousal, #AS-pleasure").slider();
+
     //Arousal slider
     $("#AS-arousal").on("input change", function () {
         let value = $(this).val();
