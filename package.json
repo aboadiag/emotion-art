@@ -1,0 +1,19 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "emotion ratings to policy training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aboadiag/emotion-art.git#9450a01b05a116e0ecb135ff969ddcf6206dcb8b"
+  },
+  "author": "Abena Boadi-Agyemang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aboadiag/emotion-art/issues"
+  },
+  "homepage": "https://github.com/aboadiag/emotion-art/tree/9450a01b05a116e0ecb135ff969ddcf6206dcb8b#readme"
+}
