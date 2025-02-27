@@ -1,8 +1,10 @@
 [build]
-  # Set the build environment to Python 3.11.9 (you can change it if necessary)
-  python_version = "3.10"
+  command = "pip install -r requirements.txt"  # Ensure dependencies are installed
+  functions = "functions"  # Netlify Functions folder (for Serverless functions)
+  publish = "public"  # Optional, if you have frontend assets
 
-  functions = "netlify/functions"  # The folder where your functions are located
+[functions]
+  runtime = "python"  # Enable Python for Netlify Functions
 
 [[redirects]]
   from = "/logSliderData"  # URL to call the function
