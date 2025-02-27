@@ -63,13 +63,13 @@ $(function(){
     $("#AS-arousal").on("input change", function () {
         let value = $(this).val();
         console.log("Arousal value:", value);
-        logUserAction("Arousal Slider Moved", { arousalValue: value });
+        logUserAction(`Arousal Slider Moved`, { arousalValue: value });
     });
 
     $("#AS-pleasure").on("input change", function () {
         let value = $(this).val();
-        console.log("Pleasure value:", value);
-        logUserAction("Pleasure Slider Moved", { pleasureValue: value });
+        // console.log("Pleasure value:", value);
+        logUserAction(`Pleasure Slider Moved`, { pleasureValue: value });
     });
 
     //refresh sliders for jquery mobile
