@@ -17,7 +17,6 @@ app = Flask(__name__)
 # Enable CORS for all routes
 CORS(app)
 
-
 # Define the route for logging user data
 @app.route('/logSliderData', methods=['POST'])
 def log_Slider_data():
