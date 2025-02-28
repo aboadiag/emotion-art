@@ -1,7 +1,8 @@
 [build]
   # Set the build environment to Python 3.11.9 (you can change it if necessary)
-  python_version = "3.10"
-
+  # python_version = "3.10"
+  command = "echo 'No build step required'"
+  publish = "."
   functions = "netlify/functions"  # The folder where your functions are located
 
 [[redirects]]
