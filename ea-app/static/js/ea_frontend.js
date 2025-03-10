@@ -1,5 +1,5 @@
 $(function(){
-    const BASE_URL = "https://1608-2600-4041-2dc-9400-fcfe-cef0-f39a-6a08.ngrok-free.app";
+    const BASE_URL = "https://8e1d-128-237-82-103.ngrok-free.app";
     var container=$("container")
     
     // declare all characters
