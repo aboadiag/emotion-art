@@ -40,4 +40,4 @@ def log_Slider_data():
     # Run the Flask app
 if __name__ == "__main__":
     # start_interaction() # intiialize the misty
-    app.run(debug=True, port=80) #flask should listen here
+    app.run(host="0.0.0.0", port=80) #flask should listen here
