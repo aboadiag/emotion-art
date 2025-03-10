@@ -1,8 +1,0 @@
-[build]
-  # Set the build environment to Python 3.11.9 (you can change it if necessary)
-  functions = "netlify/functions"  # The folder where your functions are located
-
-[[redirects]]
-  from = "/logSliderData"  # URL to call the function
-  to = "/.netlify/functions/ea_backend"  # Path to the Flask function
-  status = 200

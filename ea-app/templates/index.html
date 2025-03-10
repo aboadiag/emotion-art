@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Affective Slider (AS)</title>
+	
+	<!-- jQuery & jQuery Mobile -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<!-- Bootstrap  for easy stylinnnn -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	
+	<!-- include custom js file -->
+    <script src="/static/js/ea_frontend.js"></script>
+
+	<style>
+		.AScontainer {
+			margin:2em 0 6em 0;
+			background-repeat: no-repeat, no-repeat;
+			background-position: left, right;
+			background-size:contain;
+			padding: 0 75px 0 75px;
+		}
+
+		.arousal {
+			background-image: url("https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_sleepy.png"), 
+							url("https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_wideawake.png");
+			background-size:contain;
+		}
+
+		.pleasure {
+			background-image: url("https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_unhappy.png"), 
+							url("https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_happy.png");
+			background-size:contain;
+		}
+
+		.AffectiveSlider input {
+			/* Hide the number input */
+			/* display: none; */
+		}
+		.AffectiveSlider .ui-slider-track {
+			margin-left: 15px;
+			background-color:#FFF;
+			border-color:#000;
+		}
+
+		.AffectiveSlider .ui-slider-handle {
+			background-color:#FFF;
+			border-color:#000;
+		}
+
+		.ASintensityCue {
+			margin: 0 15px 0 15px;
+			height:48px;
+			background-image: url("https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_intensity_cue.png");
+			background-repeat: no-repeat;
+			background-size:100%;
+			background-position: center;
+			
+		}
+
+/* 
+        /* Make the slider more visually prominent */
+        input[type="range"] {
+            width: 100%;
+            height: 15px;
+            -webkit-appearance: none;
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #444;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        input[type="range"]:focus {
+            outline: none;
+        }
+
+	</style>
+</head>
+
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 mx-auto">
+				<form class="AffectiveSlider">
+					<!-- Arousal container -->
+					<div class="AScontainer arousal">
+						<input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01" />
+						<div class="ASintensityCue"></div>
+					</div>
+
+					<!-- Pleasure container -->
+					<div class="AScontainer pleasure">
+						<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01" />
+						<div class="ASintensityCue"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col mx-auto" style="text-align: center;">
+				<button id="new-image-button" class="btn btn-primary" style="width:20em;">
+					Click here to see an image
+				</button>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col" style="text-align: center;">
+				<div>
+					<img src="" id="emotion-img" class="img-fluid" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- 
+	<script>
+        // This ensures the sliders are refreshed for jQuery Mobile if needed
+        $(function(){
+            $("#AS-arousal, #AS-pleasure").slider("refresh");
+        });
+    </script>
+     -->
+</body>
+</html>
