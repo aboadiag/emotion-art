@@ -9,7 +9,7 @@ Download the artemis dataset and put it in the code repo such that this file exi
 emotion-art/artemis_official_data/official_data/artemis_dataset_release_v0.csv
 ```
 
-## Dependences
+## Dependencies
 ```
 pip install -r requirements.txt
 ```
